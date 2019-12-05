@@ -12,6 +12,9 @@ RUN set -x && \
         chmod +x /usr/local/bin/frpc && \
         rm -rf -rf /var/cache/apk/* ~/.cache frp_${FRP_VERSION}_linux_amd64.tar.gz frp_${FRP_VERSION}_linux_amd64
 
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 VOLUME /opt/frp
 
-CMD frpc -c /opt/frp/frpc.ini
+ENTRYPOINT ["/entrypoint.sh"]
