@@ -10,7 +10,7 @@ RUN set -x && \
         mkdir -p /opt/frp && \
         mv frp_${FRP_VERSION}_linux_amd64/frpc /usr/local/bin/ && \
         chmod +x /usr/local/bin/frpc && \
-        rm -rf -rf /var/cache/apk/* ~/.cache frp_${FRP_VERSION}_linux_amd64.tar.gz frp_${FRP_VERSION}_linux_amd64
+        rm -rf /var/cache/apk/* ~/.cache frp_${FRP_VERSION}_linux_amd64.tar.gz frp_${FRP_VERSION}_linux_amd64
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
