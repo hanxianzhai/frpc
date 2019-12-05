@@ -10,7 +10,7 @@ echo ${_readIni}
 
 set -e
 FRPC_BIN="/usr/local/bin/frpc"
-FRPC_CONF="/opt/frpc/frpc.ini"
+FRPC_CONF="/opt/frp/frpc.ini"
 FRPC_LOG=$(__readINI ${FRPC_CONF} common log_file)
 
 str_log_level=${str_log_level:-info}   # set log level: debug, info, warn, error
